@@ -1,0 +1,339 @@
+/* start variables */
+:root {
+    --backg-color: #fff7c0;
+    --main-color: #6ec4db ;
+    --secondary-color: #fa7c92;
+}
+/* end variables */
+/* start global variabled */
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: "Amiri:ital", sans-serif;
+}
+/* ################################################################# */
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* start header*/
+.h {
+    overflow: hidden;
+}
+.parent {
+    display: flex;
+    height: 40px;
+    background-color: var(--main-color);
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+.parent .htext {
+    background-color: var(--secondary-color);
+    height: 100%;
+    padding: 2px;
+    color: white;
+    text-shadow: 0 1px BLACK;
+    box-shadow: 0px 1px 36px 47PX white;
+    font-size: 30px;
+}
+.container {
+    background-color: white;
+    
+    margin: 10px 40px 40px 40px;
+    padding: 5px;
+    border: 2px solid black;
+}
+.parent .before {
+    position: absolute;
+    left: 0;
+    color: var(--secondary-color);
+    font-size: 45px;
+    animation-name: heart;
+    animation-duration: 3s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+.parent .after {
+    position: absolute;
+    right: 0;
+    color: var(--secondary-color);
+    font-size: 45px;
+    animation-name: heart;
+    animation-duration: 4s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+@keyframes heart {
+    0% {color: var(--secondary-color)}
+    25% {color: red}
+    50% {color: green}
+    75% {color: blue}
+    100% {color: yellow}
+}
+
+/* START QURAN */
+.quran {
+    display: flex;
+    position: relative;
+    height: 100px;
+}
+.quran .qasmall {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.quran .qasmall h2 {
+    display: inline-block;
+    font-size: 15px;
+    border: 1px solid var(--secondary-color);
+    background-color: var(--secondary-color);
+    border-radius: 12px;
+}
+.quran .qabig {
+    width: 410px;
+    height: 20px;
+    background-color: var(--main-color);
+    font-size: 17px;
+    position: absolute;
+    right: 0;
+    top: 25px;
+    visibility: hidden;
+    transition: width 5s, height 5s;
+    transition-timing-function: linear;
+}
+.quran .qasmall h2 {
+    font-size: 20px;
+}
+.quran:hover  .qabig {
+    visibility: visible;
+    width: 430px;
+    height: 50px;
+}
+.quran .qphoto img {
+    width: 170px;
+}
+div audio {
+    width: 450px;
+    height: 20px;
+}
+div.voice {
+    margin-top: 35px;
+}
+.gif {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.gif img {
+    width: 50%;
+    margin-top: 20px;
+}
+div.dawa {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    font-size: 19px;
+    text-shadow: 0 1px salmon;
+    font-weight: bold;
+}
+
+@keyframes kheart {
+    from {translate: 0px 0px ;}
+    to {translate: 125px 0px ;}
+}
+@keyframes rheart {
+    from {translate: 0px 0px ;}
+    to {translate: -125px 0px ;}
+}
+
+.kr {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+.k {
+    content: "";
+    border-top: 30px solid transparent;
+    border-bottom: 30px solid transparent; 
+    border-left: 30px solid var(--main-color);
+    animation-name: kheart;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+div.kr i {
+    color: var(--secondary-color);
+    font-size: 50px;
+    animation-name: heart;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+.r {
+    content: "";
+    border-top: 30px solid transparent;
+    border-bottom: 30px solid transparent;
+    border-right: 30px solid var(--main-color);
+    animation-name: rheart;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+.kr {
+    animation-name: heart;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+    font-size: 30px;
+    font-weight: bold;
+}
+.rt {
+    animation-name: heart;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+    font-size: 30px;
+    font-weight: bold;
+}
+div.hall {
+    background-image: url(../images/hall.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 250px;
+}
+/* ############################################################ */
+
+@media (min-width: 992px) {
+    .container {
+        margin: 20px 40px 0px 40px;
+        padding: 7px;
+    }
+    .quran .qasmall h2 {
+        font-size: 25px;
+    }
+    .quran .qabig {
+        width: 1800px;
+        height: 40px;
+        font-size: 25px;
+    }
+    .quran:hover  .qabig {
+        visibility: visible;
+        width: 700px;
+        height: 100px;
+    }
+    div audio {
+        width: 500px;
+        height: 30px;
+    }
+    div.voice {
+        margin-top: 135px;
+    }
+    .quran .qphoto img {
+        width: 270px;
+    }
+    @keyframes kheart {
+        from {translate: 0px 0px ;}
+        to {translate: 180px 0px ;}
+    }
+    @keyframes rheart {
+        from {translate: 0px 0px ;}
+        to {translate: -180px 0px ;}
+    }
+    div.dawa {
+        font-size: 21px;
+    }
+    div.hall {
+        font-size: 26px;
+    }
+}
+/* ############################################################ */
+
+@media (min-width: 1200px) {
+    
+}
+/* ############################################################ */
+@media (max-width: 768px) {
+    .container {
+        margin: 10px 20px 0px 20px;
+        padding: 5px;
+    }
+    .quran .qasmall h2 {
+        font-size: 9px;
+    }
+    .quran .qabig {
+        width: 150px;
+        height: 30px;
+        font-size: 7px;
+    }
+    .quran:hover  .qabig {
+        visibility: visible;
+        width: 170px;
+        height: 40px;
+    }
+    .quran .qphoto img {
+        width: 100px;
+    }
+    div audio {
+        width: 300px;
+        height: 18px;
+    }
+    div.voice {
+        margin-top: -15px;
+    }
+    .parent {
+        height: 30px;
+    }
+    .parent .before {
+        font-size: 33px;
+    }
+    .parent .after {
+        font-size: 33px;
+    }
+    .parent .htext {
+        font-size: 25px;
+    }
+    div.dawa {
+        font-size: 8px;
+    }
+    .rt {
+        font-size: 15px; 
+    }
+    .kr {
+        font-size: 15px; 
+    }
+    div.kr i {
+        font-size: 25px;
+    }
+    .k {
+        border-top: 15px solid transparent;
+        border-bottom: 15px solid transparent;
+        border-left: 15px solid var(--main-color);
+    }
+    .r {
+        border-top: 15px solid transparent;
+        border-bottom: 15px solid transparent;
+        border-right: 15px solid var(--main-color);
+    }
+    @keyframes kheart {
+        from {translate: 0px 0px ;}
+        to {translate: 200px 0px ;}
+    }
+    @keyframes rheart {
+        from {translate: 0px 0px ;}
+        to {translate: -200px 0px ;}
+    }
+    div.hall {
+        height: 200px;
+    }
+}
+
+
